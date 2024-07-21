@@ -6,15 +6,12 @@
     <h3>Your comment: <%= text %>.</h3>
     <% } else { %>
     <h1>Enter your details below 👇</h1>
-    <% } %>
-
-    
-<form action="/submit" method="POST">
-  <input name="name" type="text" class="feedback-input" placeholder="Name" />
-  <input name="email" type="text" class="feedback-input" placeholder="Email" />
-  <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-  <input type="submit" value="SUBMIT" />
-</form>
-
+     <form action="/submit" method="POST">
+      <input name="name" type="text" class="feedback-input" placeholder="Name" />
+      <input name="email" type="text" class="feedback-input" placeholder="Email" />
+      <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+     <input type="submit" value="SUBMIT" />
+     </form>
+ <% } %>
 
 <%- include("partials/footer.ejs") %>
