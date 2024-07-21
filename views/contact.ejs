@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+  <% if (locals.name && locals.email && locals.text) { %>
+    <h1>Welcome <%= name %>.</h1>
+    <h3>Email id: <%= email %>.</h3>
+    <h3>Your comment: <%= text %>.</h3>
+    <% } else { %>
+    <h1>Enter your details below 👇</h1>
+    <% } %>
+
+    
+<form action="/submit" method="POST">
+  <input name="name" type="text" class="feedback-input" placeholder="Name" />
+  <input name="email" type="text" class="feedback-input" placeholder="Email" />
+  <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+  <input type="submit" value="SUBMIT" />
+</form>
+
+
+<%- include("partials/footer.ejs") %>
